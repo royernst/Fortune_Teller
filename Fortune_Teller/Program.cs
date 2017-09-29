@@ -15,16 +15,25 @@ namespace Fortune_Teller
             string xportType = " ";
             string vacHome = " ";
 
-            Console.WriteLine("Welcome to FortuneTeller.exe.  This program will tell you your future based on several variables.");
-            Console.WriteLine("Please input your first name.  Your input is case-sensitive.");
+            System.Threading.Thread.Sleep(1000);
+            Console.WriteLine("Welcome to Fortune_Teller.exe.");
+            System.Threading.Thread.Sleep(2000);
+            Console.WriteLine("This program will tell you your future based on several variables.");
+            System.Threading.Thread.Sleep(3000);
+            Console.WriteLine("\nPlease input your first name.  Your input is case-sensitive.");
             string userFirst = Console.ReadLine();
             //Console.WriteLine(userFirst);
 
-            Console.WriteLine("\n" + userFirst + "?  Interesting.  I will store that information for future reference.");
+            System.Threading.Thread.Sleep(1000);
+            Console.WriteLine("\nNice to meet you, " + userFirst + ".  I will store that information for future reference.");
+            System.Threading.Thread.Sleep(3000);
             Console.WriteLine("Now, please input your last name.");
             string userLast = Console.ReadLine();
             //Console.WriteLine(userLast);
 
+            System.Threading.Thread.Sleep(1000);
+            Console.WriteLine("\nComputing...");
+            System.Threading.Thread.Sleep(3000);
             Console.WriteLine("\nNow, please input your age in numerals.");
             int userAge = int.Parse(Console.ReadLine());
             //Console.WriteLine(userAge);
@@ -43,11 +52,15 @@ namespace Fortune_Teller
             }
             else
             {
-                Console.WriteLine("You cannot follow directions.  Program terminating...");
+                Console.WriteLine("You cannot follow directions.");
+                System.Threading.Thread.Sleep(2000);
+                Console.WriteLine("Program terminating...");
             }
             //Console.WriteLine(yrsToRetire + " years to retirement.");
 
-
+            System.Threading.Thread.Sleep(2000);
+            Console.WriteLine("\nInteresting.");
+            System.Threading.Thread.Sleep(3000);
             Console.WriteLine("\nPlease input your birth month in numerals.");
             int birthMonth = int.Parse(Console.ReadLine());
             //Console.WriteLine(birthMonth);
@@ -70,15 +83,25 @@ namespace Fortune_Teller
             }
             else
             {
-                Console.WriteLine("You cannot follow directions.  Program terminating...");
+                Console.WriteLine("You cannot follow directions.");
+                System.Threading.Thread.Sleep(2000);
+                Console.WriteLine("Program terminating...");
             }
             //Console.WriteLine("$" + moneyInBank);
 
-
+            System.Threading.Thread.Sleep(2000);
+            Console.WriteLine("\nMy algorithms are beginning to show a trend line,");
+            Console.WriteLine("but I still need more information to make a proper prediction.");
+            System.Threading.Thread.Sleep(3000);
             Console.WriteLine("\nPlease input your favorite ROYGBIV color.  Enter \"Help\" for a list of colors.");
             string favColor = Console.ReadLine().ToLower();
             //Console.WriteLine(favColor);
-
+            while (favColor == "help")
+            {
+                Console.WriteLine("\nRed\nOrange\nYellow\nGreen\nBlue\nIndigo\nViolet\n\nPlease choose one of the above colors.");
+                favColor = Console.ReadLine().ToLower();
+                break;
+            }
             switch (favColor)
             {
                 case "red":
@@ -102,15 +125,14 @@ namespace Fortune_Teller
                 case "violet":
                     xportType = "Popemobile";
                     break;
-                case "help":
-                    Console.WriteLine("Red\nOrange\nYellow\nGreen\nBlue\nIndigo\nViolet\nPlease restart Fortune_Teller.exe");
-                    break;
                 default:
                     xportType = "Short Bus";
                     break;
             }
 
-
+            System.Threading.Thread.Sleep(2000);
+            Console.WriteLine("\nI feel like I will be able to arrive at a prediction soon.");
+            System.Threading.Thread.Sleep(2000);
             Console.WriteLine("\nFinally, please input the number of siblings you have.  Half- and step- siblings also count.");
             int numSiblings = int.Parse(Console.ReadLine());
             //Console.WriteLine(numSiblings);
@@ -140,9 +162,21 @@ namespace Fortune_Teller
                 vacHome = "Pripyat, Ukraine";
             }
 
-
-            Console.WriteLine("{0} {1} will retire in {2} years with ${3} in the bank,", userFirst, userLast, yrsToRetire, moneyInBank);
+            System.Threading.Thread.Sleep(2000);
+            Console.WriteLine("\nVery good.  I have all the information I need.");
+            System.Threading.Thread.Sleep(2000);
+            Console.WriteLine("\nCalculating . . .");
+            System.Threading.Thread.Sleep(2000);
+            Console.WriteLine("Calculating . . .");
+            System.Threading.Thread.Sleep(2000);
+            Console.WriteLine("Calculating . . .");
+            System.Threading.Thread.Sleep(2000);
+            Console.WriteLine("\n\n{0} {1} will retire in {2} years with ${3} in the bank,", userFirst, userLast, yrsToRetire, moneyInBank);
             Console.WriteLine("a vacation home in {0} and a {1}.", vacHome, xportType);
+            System.Threading.Thread.Sleep(3000);
+            Console.WriteLine("\nI hope you enjoyed your fortune.  Please run again if you want another fortune.");
+            System.Threading.Thread.Sleep(3000);
+            Console.WriteLine("\nProgram Terminating . . .");
         }
     }
 }
